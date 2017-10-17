@@ -35,7 +35,9 @@
       return nil;
     }
     
-    NSMutableDictionary *appboyOptions = [@{ABKSDKFlavorKey : @(SEGMENT)} mutableCopy];
+    NSMutableDictionary *appboyOptions = [@{ABKSDKFlavorKey : @(SEGMENT),
+                                          @"minimumIntervalBetweenTriggerActionsInSeconds" : @(0)
+                                          } mutableCopy];
     NSString *customEndpoint = self.settings[@"customEndpoint"];
     if (customEndpoint && [customEndpoint length] != 0) {
       SEGAppboyIntegrationEndpointDelegate *endpointDelegate =
