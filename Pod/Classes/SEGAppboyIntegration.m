@@ -36,7 +36,7 @@
     }
     
     NSMutableDictionary *appboyOptions = [@{ABKSDKFlavorKey : @(SEGMENT),
-                                          @"minimumIntervalBetweenTriggerActionsInSeconds" : @(1)
+                                            ABKMinimumTriggerTimeIntervalKey : @(1)
                                           } mutableCopy];
     NSString *customEndpoint = self.settings[@"customEndpoint"];
     if (customEndpoint && [customEndpoint length] != 0) {
